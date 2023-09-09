@@ -33,6 +33,17 @@ body {
     background: #555;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
 .fixed-panel {
     position: fixed;
 
@@ -42,9 +53,6 @@ body {
     color: whitesmoke;
 
     display: flex;
-
-    z-index: 50000000;
-
 }
 
 .header {
@@ -52,7 +60,7 @@ body {
     right: 0;
 
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .footer {
@@ -105,6 +113,7 @@ body {
     padding: 0;
     border: none;
     display: none;
+    animation: fadeEffect 0.8s;
 }
 
 #frameHolder {
@@ -129,5 +138,21 @@ body {
 }
 
 .selected {
-    background-color: dimgray;
+    background-color: #363636;
+    border-bottom: 1px solid cyan;
+}
+
+.selected-frame {
+    display: block !important;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+        transform: translate(0, -20%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
