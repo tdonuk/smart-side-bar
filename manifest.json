@@ -1,0 +1,23 @@
+{
+  "name": "Smart Sidebar",
+  "version": "1.0.0",
+  "description": "Smart sidebar for chrome based browsers",
+  "manifest_version": 3,
+  "author": "Taha Donuk",
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "Smart Sidebar"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "permissions": [
+    "sidePanel",
+    "webNavigation",
+    "webRequest",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
