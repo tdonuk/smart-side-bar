@@ -19,5 +19,17 @@
   ],
   "host_permissions": [
     "<all_urls>"
-  ]
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "my_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
 }

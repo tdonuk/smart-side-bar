@@ -44,6 +44,7 @@ body {
     display: flex;
 
     z-index: 50000000;
+
 }
 
 .header {
@@ -112,6 +113,8 @@ body {
     width: 100%;
 
     margin-top: 60px;
+
+    border-top: 1px solid dimgray;
 }
 
 .link-button {
