@@ -9,7 +9,7 @@
 <body>
 <div id="content" class="bg-black">
     <div id="header" class="fixed-panel header bg-black">
-        <div id="question" class="flex-row">
+        <div id="triggerButtons" class="flex-row">
             <div class="item-box" id="googleTabTrigger">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzklEQVR4nO2UMQ7CMAxFuxbKyoVaEBUngTMwtD0cHICBgQ7QcgfU6aEgDyFSKjUuAgn+EunL8YvtyFH01xABa+BGuFog7wOYAK2aPsBTg8oecv8jAGACVEANdHKWQKwGSPKDp9d7FxICqMS6ACkwBTLgKn6hBdRipU7cQvyzFtCJlThxM/HvY1WQeSo4aQGlNQOTNAGW1gx2WkAsv8WnIzAPBliQwgzU9Ny0xbxckr9AggA+maQWZDs6wIJsvmoXtbx5XedKSAOsQjsQ/aYel2QV/brfNQ8AAAAASUVORK5CYII=">
                 <span class="link-button">Search</span>
@@ -18,9 +18,8 @@
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACjUlEQVR4nMWVXWjOYRjGN1tb+Vx2ojHCjlbmZCdeTnzUduBAw8EwtRNq5COM2AEpH0VJEbGVSNoBsXqViA2ltKMdTAkh37xl8pG1/XTNVZ49+78aU+56e//P/Tz3dT3355OT8z8FyAMagA7gC/ABuAos/hfgY4Hb/BQRHAJOAU+sOwnMBGYDhX9DcBH4CqyM9GXASwbLN+ACMGO44ItsuC3QjQZ2O1SfgRPAMoUL2AtkgPdAxe+A5wH3DS6gAutrgWdAP3AeKE2wnQI8Ah4nhgxYCvTafYF1Wl9jQhHPDZK/BjgHVAYYC3x2VQxeAnwEbgETgJv6eW+DjYq9rgK6Ai/7gBZgEpALvFYxxARNwHdgqtchwSaDpYC0v5/b4/HAQSe5B2gEHijhMcEN3T5YhwRbDNrnRL5zKI8ARUFlXQ6qal9MoDq/loWg0UZHFSZgInDMujdAvULjs6vtTVtM0Ay8AvK9Tvu2dcBOgw1UVJBkySf/3wPKvbfeuuqQoNrKdV6X2ygEGSD3foF1u3wJXSbtvXwnujn24ordq/N6lN1XGCTHHZ5ih0uyPQ6p19eB9phgP7/kkuaM9UVOaK87NeOES7ZmIbgjkpigFeh2UnvszQFgnJtNpYnzM8ffmxOKYppLvikmOO1E57ppWnxTNRNuriqfVagkG0MCT+AON21JTKBkSeYHukrgrMdCnnWpYF7VWNcJPPUs0u2XDAL3oUIPqofA5IT9Ug+6fs+q2sBOYx1XXmoIeABS4Vcr48QuB1YAZzyiFa49Gt2BzQ6DL8wKHJFM9+OhJIfyIn5Q3Lm6feuwwCNjNdMsgboHJIqxvg8Dd61rB8b8MUECobq9DXjrEKpa1qohRww+EvkBv1+bKH737dgAAAAASUVORK5CYII=">
                 <span class="link-button">Chat GPT</span>
             </div>
-        </div>
 
-        <div id="streaming" class="flex-row">
+
             <div class="item-box" id="youtubeTabTrigger">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABHklEQVR4nO2UsWoCURREFyJG1CYJFtrHUv2CGJJGIa3fYpvfsEhcv0S7+AeBFBHEWpEQbFZOWJgHD/PeRuMuWDjwmjtzZ+Du3RsEZ5wUgDbwCkyAD2ABLIE1v7EWt5B2ot62z/we2HI8ts4QIJRgBHSBBlAFrvTyljZv1avSdi2PoStgKvLxiBE/yOPNRc5E3nqaW3sE1OXx6SJXIq89zREwACoJATfyWLrIjciip9ngC3gGLh2akjTfLgOzQRd/BBjEq9nb0eTERWkFPB0SsO+IVkDfM6Jy0ogy/8gzkfWs1nSa9Y8WWqeiAzSBmnUSCpa2YNVjTUs9xiP0XdI0jl2UdFHjkBdgDLwDc53k+O3C1OfSjtV7998RnxFkgh+FL+ZQC6+E4QAAAABJRU5ErkJggg==">
                 <span class="link-button">YouTube</span>
@@ -29,19 +28,21 @@
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAACJklEQVR4nM2VsU6UURCFl0jihkVs7IUojQRLAsQOeQEQTAy4mKAUlGiMHclGYmUhNMC2RGIjIKUPgEInYiHQSSK8gTH5yOBZMo73312Iid5mMvfOP3Nnzjn3z+X+lwUUgH6gCDyRNb/wN5L3AmvAoewrYFr2nfZXge7zJL8MvAE+A4PAxYy4PHAH2AFeAy31FmhTcrvxhTq/aQRKwDbQWk8HVmA0cXYTeAQ8le1MxBRVKLsjjWg67N0CtoBdYAF4IWv+puEW4q2j5Wogb/sRAfeBA2AAaAjxDcLjwHeu0e0kySD2DIYOvgHX5bdnXK5dhXrc3hCwEgObRcdTFmlEA87/CbwHbiQKWdIPgXWHv+lIwlpzfifw1Y+IX2sS+A68NJKE0e0BHW7PdNTni4wBs8439iyE2yJ7BZjXiMYqFwHKwEMXP2ds8wmmPKuAZ8BMqkhlARPq7p78GfvOnZvOpmp1sniOTsardZLCZPeMmOwHTNYjJoUEuz6aDpz/owq7hoGNBLuaYuBqSNqrkZzoA7gWkwednIoPuAu8TQV3S6mNbm9UCYYyFD+s85Gg+C9AV+pSOT3XpbDXY0KTDsp6u8rCYCM+H2LZUrKAAlr0fhUTZx3GHr3C4x5kF/MA+ARcyiyiwFYVKvnR1fjGRvRcBa7W802lo2VhZHjkM+LyAtkwWKrZQUYSI8OK6Lju/vGz8o+MRZkgn7FYE3Bbf77Hsn1/6OBfrmPW8ZPzQ+BxhgAAAABJRU5ErkJggg==">
                 <span class="link-button">YT Music</span>
             </div>
-        </div>
 
-
-        <div id="social" class="flex-row">
-            <div class="item-box" id="whatsappTabTrigger">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6ElEQVR4nN3VzYvNYRQH8OGOkZcUCxak7Lw2mg0rUZSX8naTyX9AGWJSspmiLGSplIW8TPwFspOdZIWMYZQkK28jyls+Ojo3v67nzr1jOd+6i+ec7/P9Pr/nnOfcrq4pDczAPgxjBJ/z9ww30I+e/xXfjefa4wXqkxGejrMVgcc4ilWYizlYgcN4WOGdQ60Tg4b4txSptTnMoeT+MWknvhO/8B1bJvHVmyom9YkKOpqkgYwtwQVs7MAkviQwViw89iThSeNacCdjDzowqOFR8veXCFcyOZjrmXldDfR1YHIkucOlZHRLoDfX0/AhY2+xuAODlckfLSXfZXJBJXY+YzfbiSc/2jjwqZQcz+SiSmxeFi2uqr8Dg+AHxkvJRgetb4r34ku24UBeXQ+u5Xp2hbsmNUZKBjFvAicLuQ34mPn7uFUp/hvMSt5gxq6WDOqZfFl6vViOu/7FWOa7cyAG9pYMuvO+AwcmuOc+DOE2LmFZxo/l3qeh1WrzvSRta2VQArbmeIlm2NGKNB8/8TUn5lJsjoFW3PB3vBzHjzzYmVbcag3iD+VV07w/hXVYGO8Ea3Gi0nlx8tMTHSYMLjYV7z1ea48o7PaWwhWDGGzXcRCrc9Z35xCMng+heIzx4mOoXcaulgWdMvgN/2Z0juIWb0QAAAAASUVORK5CYII=">
-                <span class="link-button">Whatsapp</span>
+            <div class="item-box" id="instagramTabTrigger">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjUlEQVR4nMWWu04CQRSG10YCJfaCKPgI4gNg4+VRCGhhBVhaACViZ4hPoTYaeQ8vjfIEavOZIz/JstmRdcfon0w2e87M+XNucyYI/gtADjgADoHjBKup/bkkxpeAI2ACXAE94DTB6mm/nWuYne8ILoFbYD1lBMrAHTCKJZIHRrCchmAGIAPcm0dxOZh4eLCivOT1X5G9bHjTvsU0DYFBBWJohmQ3wG40VN3AAaAInAPPwIe+Q5NLn1fCvzyRrGvkYSMnthwEO8AL0AJKljMLq/5NXnOcm7fpIgHWZGjLYagqfcGHxELUiiOYAWgDZz4kFvtSVB4GsAE8+pC8L+obpn3x5kPytKh3mHry4EMyTJCTDjDwISmqeqoOgm3pV1OTSFeTobb6Y1kh6vy0TxZ1fMHK1KpIxWDfQZwHoTO9aMd73V1xiLu7ZrdwOfgFAJvA69wtLEVDAyfjSZABxkDdNRlHGjgVDw/GwMWiEdxQ6K6BfsKHRF85sHN1J0GELAvsadoleUjYPts/n4O/xCcLCCOm0VSA4gAAAABJRU5ErkJggg==">
+                <span class="link-button">Instagram</span>
             </div>
             <div class="item-box" id="telegramTabTrigger" >
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2UlEQVR4nO3VTYhOYRQH8EE+y5Sw8ZGNoWxE+YosZGSirFhPLChJlJUURSxsWKi3RLKRRJKPsqIsKJtBPlLe1NQQZRYWLPx0ct66bvfyzmtKybN57n3O/zn/c//n43Z1/V9/a2EqdmMAH7ByNJ334BQ+4jLW4nQQ/qnjMdiIW3iHY5hTsN/Bpk6dd2MPXuIx+jEppdpRwAXxrJE6X5AShCSXsLpg60UTN/N9NobadTwWfSnJEI6Gg4I9om/gG57EV+b5ZtzuRJKJJUxE/wZvM4B5BdshHK9zPh8nsvxuYH1NAI0k2JsEq0qYa9havjgD16skqYm+kTmKPGyrwAWmp3y4Dw8wucZ5S/tmEk3BIxyswE7DcOSzbIhqeJj6nsSymui7sxiu4EJNQOtwv8rWAizCkUz469Q2CHoLmMjZPUyo8bE/ur+WpARegkEsLZxtxytM/8W9i1GNbZHkhTM4kM9r8B4Lf3PnKRaPhKSvpS/O4wsOY1wNPgriM8aPhCRm0qeQBy+wIfe7UfYV+BXRvG0TFC5ezaYbzqQ2c6zHvryE3YWznZD0Z5N+xXPMzfMtOWl3FrCNjv4hqfNgNt/Mip/VQOYrpsaz8ogZleVHEOdy3sX+c6f/U+s7sVK3fcLrCs8AAAAASUVORK5CYII=">
                 <span class="link-button">Telegram</span>
             </div>
         </div>
+
+        <div id="refreshButton">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgklEQVR4nO2WyUoDQRCGO2evGhWiEFHfRlRIFBXEo+LC4Cv4FCIuF1GDhgjqu7jdXVAvXozLJ4UFNmPG6fS0wUN+6MtUVX9dPV3dZUxb/01APxABp8A18KzjAjgDloC+0MAdoE66xGcj8wKAEvBkTboLTAEDQIeOQf22Zy1OYkZ8ob3Au050KJk7xBTVV/QBzPuAc8AaMOsRGyn4DRhrGp5FwKpm/gB0tRp+rPCtNMeyjMAVIQfuJTFrMQB3OoJtjXXYoiSHilWPlYBgKTXRUSPjBD8VZMuBYZ3vMm7oBG4bgO+B7gxAewfjOkhzqGUAS0I3CQnl485XahzyBcbmG3X6hUBVjZMhwM6Hlu/bJuSpTi9TIG8VfCEgvJxaJcC2Zl01rRRfWT/+etv8IXxcnzR52lY84uf0Sc35wBcUjN63RcdGoKYx0kT0NA0WSftibXtd25tpvQbt1mcG2AderTe4ZLIIKADrjs2eVMNmyIowuoBFbW/PY+3tCbAcFNiWCaRPRkEdaivVQ5cAAAAASUVORK5CYII=">
+        </div>
+
     </div>
     <div id="frameHolder" class="bg-black fixed-panel tabbed-pane">
         <iframe id="searchFrame"
@@ -65,12 +66,12 @@
                 height="100%"
                 src="https://music.youtube.com">
         </iframe>
-        <iframe id="whatsappFrame"
+        <iframe id="instagramFrame"
                 class="tab"
-                title="Whatsapp"
+                title="Instagram"
                 width="100%"
                 height="100%"
-                src="https://web.whatsapp.com">
+                src="https://www.instagram.com">
         </iframe>
         <iframe id="chatGptFrame"
                 class="tab"

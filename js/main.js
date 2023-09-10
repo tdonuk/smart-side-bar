@@ -30,6 +30,16 @@ function selectTabButton(buttonId) {
 
 document.addEventListener("DOMContentLoaded", function () {
     initFrameListeners();
+
+    const refreshButton = document.getElementById("refreshButton");
+    refreshButton.onclick = () => {
+        const frameHolder = document.getElementById("frameHolder");
+        const selectedTab = frameHolder.getElementsByClassName("selected-frame")[0];
+
+        frameHolder.removeChild(selectedTab);
+
+        frameHolder.insertAdjacentElement("afterbegin", selectedTab);
+    }
 });
 
 function initFrameListeners() {
@@ -47,8 +57,8 @@ function initFrameListeners() {
             frame: document.getElementById("ytMusicFrame")
         },
         {
-            button: document.getElementById("whatsappTabTrigger"),
-            frame: document.getElementById("whatsappFrame")
+            button: document.getElementById("instagramTabTrigger"),
+            frame: document.getElementById("instagramFrame")
         },
         {
             button: document.getElementById("chatGptTabTrigger"),
@@ -57,10 +67,6 @@ function initFrameListeners() {
         {
             button: document.getElementById("telegramTabTrigger"),
             frame: document.getElementById("telegramFrame")
-        },
-        {
-            button: document.getElementById("twitterTabTrigger"),
-            frame: document.getElementById("twitterFrame")
         },
     ];
 
@@ -71,5 +77,6 @@ function initFrameListeners() {
         }
     }
 
-    buttonConfigs[0].button.onclick();
+    selectTab(buttonConfigs[0].frame.id);
+    selectTabButton(buttonConfigs[0].button.id);
 }
